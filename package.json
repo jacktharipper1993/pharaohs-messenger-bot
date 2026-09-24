@@ -1,0 +1,1 @@
+{"dependencies":{"dotenv":"^16.4.5","express":"^4.19.2"},"description":"Facebook Messenger webhook bot for Pharaoh's Carpets & Floors LLC — answers only from the approved 120-question FAQ bank.","engines":{"node":">=18"},"license":"UNLICENSED","main":"server.js","name":"pharaohs-messenger-bot","scripts":{"start":"node server.js"},"version":"1.0.0"}
