@@ -1,0 +1,722 @@
+[
+  {
+    "id": 1,
+    "category": "Pricing & Estimates",
+    "question": "Do you give free estimates?",
+    "answer": "Yep, estimates are free. Call or text 269-409-1239 with your rooms and the flooring you're thinking about, and we'll get you scheduled."
+  },
+  {
+    "id": 2,
+    "category": "Pricing & Estimates",
+    "question": "How much does new flooring cost?",
+    "answer": "Every job's different, which is why estimates are free. Call or text 269-409-1239 and we'll get you a firm price."
+  },
+  {
+    "id": 3,
+    "category": "Pricing & Estimates",
+    "question": "Can I buy my own flooring and have you install it?",
+    "answer": "We prefer to supply the materials so we can stand behind the whole job — but call us and we'll talk through your situation."
+  },
+  {
+    "id": 4,
+    "category": "Pricing & Estimates",
+    "question": "Can you give me a quote over the phone?",
+    "answer": "We can give a rough ballpark by phone, but real numbers need eyes on the space — that's exactly why the in-home estimate is free."
+  },
+  {
+    "id": 5,
+    "category": "Pricing & Estimates",
+    "question": "What's the most affordable flooring option?",
+    "answer": "Usually laminate or carpet. We'll price a few options at your estimate so you can compare side by side."
+  },
+  {
+    "id": 6,
+    "category": "Pricing & Estimates",
+    "question": "Why is there extra material on my estimate?",
+    "answer": "We add a small overage for cuts and waste — it's standard, and it beats running short mid-job."
+  },
+  {
+    "id": 7,
+    "category": "Pricing & Estimates",
+    "question": "Do I need to measure my rooms first?",
+    "answer": "Nope — we measure everything ourselves at your free estimate. Just have your rooms in mind."
+  },
+  {
+    "id": 8,
+    "category": "Pricing & Estimates",
+    "question": "Do you do new construction?",
+    "answer": "Yes — we work with builders and homeowners on new construction. Call us early so we can line up with your build schedule."
+  },
+  {
+    "id": 9,
+    "category": "Pricing & Estimates",
+    "question": "Do you do flooring for rental properties?",
+    "answer": "All the time — LVP is the landlord favorite: tough, waterproof, and quick to install between tenants."
+  },
+  {
+    "id": 10,
+    "category": "Pricing & Estimates",
+    "question": "Should I get other quotes?",
+    "answer": "Sure — but compare apples to apples: materials, prep work, and who's actually doing the install. We'll earn it on the details."
+  },
+  {
+    "id": 11,
+    "category": "Pricing & Estimates",
+    "question": "Will you match another company's price?",
+    "answer": "Bring us the written quote and we'll take a look — we'd rather earn your business than lose it over a few dollars."
+  },
+  {
+    "id": 12,
+    "category": "Pricing & Estimates",
+    "question": "Do you offer referral discounts?",
+    "answer": "The best compliment is a referral — have them mention your name when they call 269-409-1239."
+  },
+  {
+    "id": 13,
+    "category": "Pricing & Estimates",
+    "question": "Is there a minimum job size?",
+    "answer": "Nope — from single-room repairs to whole houses, we'll take a look."
+  },
+  {
+    "id": 14,
+    "category": "Pricing & Estimates",
+    "question": "My floor was damaged by water — will insurance cover it?",
+    "answer": "Often, yes — we can document the damage and work with your adjuster. Call us and we'll walk you through it."
+  },
+  {
+    "id": 15,
+    "category": "Pricing & Estimates",
+    "question": "Is my estimate price guaranteed?",
+    "answer": "The price we quote is the price — unless you change the scope or we find something hidden under the old floor, and we'll always tell you first."
+  },
+  {
+    "id": 16,
+    "category": "Pricing & Estimates",
+    "question": "Do you require a deposit?",
+    "answer": "We'll go over payment details, including any deposit, when you book your job."
+  },
+  {
+    "id": 17,
+    "category": "Pricing & Estimates",
+    "question": "How long is my estimate good for?",
+    "answer": "Estimates are good for a limited time since material prices change — we'll put the date right on yours."
+  },
+  {
+    "id": 18,
+    "category": "Products & Materials",
+    "question": "What flooring do you install?",
+    "answer": "Carpet, hardwood, LVP, laminate, and tile — plus shiplap and epoxy. Not sure what fits? We'll walk you through it at your estimate."
+  },
+  {
+    "id": 19,
+    "category": "Products & Materials",
+    "question": "What's the best flooring for pets and kids?",
+    "answer": "LVP — it's tough, waterproof, and easy to clean. We'll help you pick at your estimate."
+  },
+  {
+    "id": 20,
+    "category": "Products & Materials",
+    "question": "Can you match my existing flooring?",
+    "answer": "Usually yes. Send a photo or bring a sample and we'll find the closest match."
+  },
+  {
+    "id": 21,
+    "category": "Products & Materials",
+    "question": "Do you install in basements?",
+    "answer": "Yes — LVP and tile are great for basements since they handle moisture."
+  },
+  {
+    "id": 22,
+    "category": "Products & Materials",
+    "question": "Do you do stairs?",
+    "answer": "Yes — stairs in carpet, hardwood, and LVP."
+  },
+  {
+    "id": 23,
+    "category": "Products & Materials",
+    "question": "What's the difference between LVP and laminate?",
+    "answer": "Both are affordable and durable, but LVP is waterproof — better for kitchens, baths, and basements."
+  },
+  {
+    "id": 24,
+    "category": "Products & Materials",
+    "question": "What's the most durable flooring?",
+    "answer": "Tile and LVP take the most beating. For busy households, LVP is the sweet spot — tough, waterproof, and priced right."
+  },
+  {
+    "id": 25,
+    "category": "Products & Materials",
+    "question": "Is LVP really waterproof?",
+    "answer": "Yes — quality LVP is 100% waterproof. That's why we recommend it for kitchens, baths, basements, and mudrooms."
+  },
+  {
+    "id": 26,
+    "category": "Products & Materials",
+    "question": "Can you install over my existing floor?",
+    "answer": "Sometimes — it depends on what's down now and what shape it's in. We'll check at your estimate and give it to you straight."
+  },
+  {
+    "id": 27,
+    "category": "Products & Materials",
+    "question": "Do you help with colors and styles?",
+    "answer": "Absolutely — send photos of your space or we'll bring samples to your estimate and help you pick."
+  },
+  {
+    "id": 28,
+    "category": "Products & Materials",
+    "question": "Solid vs. engineered hardwood — what's the difference?",
+    "answer": "Solid is one solid piece of wood — refinishable for decades. Engineered has a real-wood top over layered plywood, so it handles humidity better. We'll help you choose."
+  },
+  {
+    "id": 29,
+    "category": "Products & Materials",
+    "question": "Is carpet outdated?",
+    "answer": "Not at all — carpet's still the coziest, quietest choice for bedrooms, and modern carpet is way more stain-resistant than the old stuff."
+  },
+  {
+    "id": 30,
+    "category": "Products & Materials",
+    "question": "I have allergies — what flooring is best?",
+    "answer": "Hard surfaces like LVP and hardwood don't trap allergens the way carpet can — plenty of folks switch for exactly that reason."
+  },
+  {
+    "id": 31,
+    "category": "Products & Materials",
+    "question": "What's your most popular flooring right now?",
+    "answer": "LVP, by a mile — waterproof, tough, looks like real wood, and priced right."
+  },
+  {
+    "id": 32,
+    "category": "Products & Materials",
+    "question": "What's the best flooring for kitchens?",
+    "answer": "LVP or tile — both handle spills, dropped pans, and heavy foot traffic without breaking a sweat."
+  },
+  {
+    "id": 33,
+    "category": "Products & Materials",
+    "question": "What's the best flooring for bathrooms?",
+    "answer": "Tile or LVP — both are waterproof, which is non-negotiable around tubs and toilets."
+  },
+  {
+    "id": 34,
+    "category": "Products & Materials",
+    "question": "What about laundry rooms?",
+    "answer": "LVP or tile again — washers leak, and waterproof floors mean one less disaster to worry about."
+  },
+  {
+    "id": 35,
+    "category": "Products & Materials",
+    "question": "What's good for a mudroom?",
+    "answer": "Tile or LVP — mudrooms take a beating from boots, paws, and Michigan winters, and both clean up easy."
+  },
+  {
+    "id": 36,
+    "category": "Products & Materials",
+    "question": "Do you do garage floors?",
+    "answer": "Yes — our epoxy coatings turn a stained concrete garage into something you'll actually want to show off."
+  },
+  {
+    "id": 37,
+    "category": "Products & Materials",
+    "question": "Can you tile my shower?",
+    "answer": "Yep — we do shower walls and floors in tile. Bring us your vision and we'll make it happen."
+  },
+  {
+    "id": 38,
+    "category": "Products & Materials",
+    "question": "Can flooring go over radiant heat?",
+    "answer": "Yes — LVP, tile, and engineered hardwood all work over radiant heat. We'll confirm your system type at the estimate."
+  },
+  {
+    "id": 39,
+    "category": "Products & Materials",
+    "question": "Can you install heated floors?",
+    "answer": "Yes — heated tile floors are a game-changer in bathrooms. Ask us about it at your estimate."
+  },
+  {
+    "id": 40,
+    "category": "Products & Materials",
+    "question": "Do you have eco-friendly options?",
+    "answer": "We do — ask us about low-VOC and responsibly sourced options when we talk materials."
+  },
+  {
+    "id": 41,
+    "category": "Products & Materials",
+    "question": "Which direction should the planks run?",
+    "answer": "Usually along the longest wall or toward the main light source — but we'll lay it out with you so it looks right in your space."
+  },
+  {
+    "id": 42,
+    "category": "Products & Materials",
+    "question": "What carpet padding do you use?",
+    "answer": "Quality padding matched to your carpet — good pad makes carpet feel better and last longer. We'll show you the options."
+  },
+  {
+    "id": 43,
+    "category": "Products & Materials",
+    "question": "Do you seal grout?",
+    "answer": "Yes — we seal grout on tile jobs to help it resist stains. We'll also tell you how to keep it looking fresh."
+  },
+  {
+    "id": 44,
+    "category": "Products & Materials",
+    "question": "Does hardwood need to acclimate before install?",
+    "answer": "Yes — we let hardwood sit in your home for a few days so it adjusts to your temperature and humidity. It prevents gaps later."
+  },
+  {
+    "id": 45,
+    "category": "Products & Materials",
+    "question": "What's trending — wide or narrow planks?",
+    "answer": "Wide planks are having a moment — they make rooms feel bigger. But the right choice depends on your space, and we'll be honest about it."
+  },
+  {
+    "id": 46,
+    "category": "Products & Materials",
+    "question": "Nylon, polyester, or triexta carpet — what's the difference?",
+    "answer": "Short version: nylon is the toughest, polyester is the softest for the money, and triexta is the stain-fighting champ. We'll match one to your household."
+  },
+  {
+    "id": 47,
+    "category": "Products & Materials",
+    "question": "What tile sizes are popular?",
+    "answer": "Large-format tile is big right now — fewer grout lines, cleaner look. But small tile still rules in showers and tight spaces."
+  },
+  {
+    "id": 48,
+    "category": "Products & Materials",
+    "question": "What holds up best in entryways?",
+    "answer": "Tile or LVP — entryways get the most abuse in the house, and both shrug off dirt, water, and boots."
+  },
+  {
+    "id": 49,
+    "category": "Products & Materials",
+    "question": "My dog scratched the floor — can you fix it?",
+    "answer": "Depends on the damage — send us a photo and we'll tell you straight whether it's a repair or a replacement."
+  },
+  {
+    "id": 50,
+    "category": "Products & Materials",
+    "question": "Can you refinish my existing hardwood instead of replacing it?",
+    "answer": "If the wood's in decent shape, refinishing can save you real money — we'll take a look and give you an honest answer."
+  },
+  {
+    "id": 51,
+    "category": "Installation Day & Logistics",
+    "question": "How long does installation take?",
+    "answer": "Depends on the job — most rooms take a day or two. You'll get a firm timeline with your free estimate."
+  },
+  {
+    "id": 52,
+    "category": "Installation Day & Logistics",
+    "question": "Do you move furniture?",
+    "answer": "We can move most furniture — just mention it when scheduling. Please move small valuables and breakables ahead of time."
+  },
+  {
+    "id": 53,
+    "category": "Installation Day & Logistics",
+    "question": "Do you remove the old flooring?",
+    "answer": "Yes — we tear out and haul away your old flooring as part of the job."
+  },
+  {
+    "id": 54,
+    "category": "Installation Day & Logistics",
+    "question": "What do I need to do before installation day?",
+    "answer": "Just clear out small items and valuables — we handle the furniture and the old flooring."
+  },
+  {
+    "id": 55,
+    "category": "Installation Day & Logistics",
+    "question": "Do I need to be home during installation?",
+    "answer": "Someone 18 or older needs to let us in and stay reachable, but you don't have to hover — most folks just go about their day."
+  },
+  {
+    "id": 56,
+    "category": "Installation Day & Logistics",
+    "question": "Do you clean up after the job?",
+    "answer": "Yes — we clean the work area and haul away debris and old flooring. You come home to finished floors, not a mess."
+  },
+  {
+    "id": 57,
+    "category": "Installation Day & Logistics",
+    "question": "Can you do just one room?",
+    "answer": "Of course — single-room jobs are some of our most common."
+  },
+  {
+    "id": 58,
+    "category": "Installation Day & Logistics",
+    "question": "My floor squeaks / feels uneven — can you fix that?",
+    "answer": "Usually, yes — we'll check your subfloor during the estimate and fix issues before the new floor goes down."
+  },
+  {
+    "id": 59,
+    "category": "Installation Day & Logistics",
+    "question": "How soon can I walk on the new floor?",
+    "answer": "LVP and laminate: right away. Hardwood finishes and tile grout need some cure time — we'll tell you exactly for your job."
+  },
+  {
+    "id": 60,
+    "category": "Installation Day & Logistics",
+    "question": "Do you install transitions and trim?",
+    "answer": "Yes — transitions, baseboards, and trim are all part of a finished job."
+  },
+  {
+    "id": 61,
+    "category": "Installation Day & Logistics",
+    "question": "How do you control dust during tear-out?",
+    "answer": "We contain the work area and clean as we go — tear-out is dusty, but we keep it from taking over your house."
+  },
+  {
+    "id": 62,
+    "category": "Installation Day & Logistics",
+    "question": "Do you move appliances like fridges and stoves?",
+    "answer": "Yes — we handle appliances on install day. Just empty the fridge ahead of time."
+  },
+  {
+    "id": 63,
+    "category": "Installation Day & Logistics",
+    "question": "What subfloor prep is included?",
+    "answer": "We check, level, and prep your subfloor as part of the job — a flat foundation is what makes floors last."
+  },
+  {
+    "id": 64,
+    "category": "Installation Day & Logistics",
+    "question": "Do you test for moisture before installing?",
+    "answer": "Yes — especially on concrete and in basements. Moisture is the silent killer of floors, so we check before anything goes down."
+  },
+  {
+    "id": 65,
+    "category": "Installation Day & Logistics",
+    "question": "Can we stay in the house during a multi-day install?",
+    "answer": "Usually yes — we'll work room by room so you're not displaced. We'll plan it out with you beforehand."
+  },
+  {
+    "id": 66,
+    "category": "Installation Day & Logistics",
+    "question": "How noisy is installation?",
+    "answer": "Saws and nail guns aren't quiet — expect construction noise during work hours. We keep it to reasonable hours."
+  },
+  {
+    "id": 67,
+    "category": "Installation Day & Logistics",
+    "question": "Will there be fumes or odors?",
+    "answer": "Some products have a new-floor smell for a day or two — we use low-odor products where we can and ventilate as we work."
+  },
+  {
+    "id": 68,
+    "category": "Installation Day & Logistics",
+    "question": "How many people will be on my job?",
+    "answer": "Depends on the size — small jobs might be two installers, bigger ones a full crew. You'll always know who's showing up."
+  },
+  {
+    "id": 69,
+    "category": "Installation Day & Logistics",
+    "question": "Will someone supervise the job?",
+    "answer": "Yes — there's always a lead on site making sure everything's done right."
+  },
+  {
+    "id": 70,
+    "category": "Installation Day & Logistics",
+    "question": "Do you use subcontractors?",
+    "answer": "No — it's our own crew on your job, start to finish. That's how we keep quality consistent."
+  },
+  {
+    "id": 71,
+    "category": "Installation Day & Logistics",
+    "question": "Do you do a final walkthrough?",
+    "answer": "Every time — we walk the job with you at the end, handle any touch-ups on the spot, and don't leave until you're happy."
+  },
+  {
+    "id": 72,
+    "category": "Installation Day & Logistics",
+    "question": "When can I move furniture back in?",
+    "answer": "LVP and laminate: same day. Hardwood and tile need a little cure time first — we'll give you the exact timing for your job."
+  },
+  {
+    "id": 73,
+    "category": "Installation Day & Logistics",
+    "question": "What do I do with my pets during installation?",
+    "answer": "Keep them in a room we're not working in, or with a friend for the day — doors will be open and it's loud."
+  },
+  {
+    "id": 74,
+    "category": "Scheduling & Service Area",
+    "question": "What are your hours?",
+    "answer": "Mon–Fri 8am–5pm, Sat 9am–3:30pm. Closed Sundays — message us and we'll reply first thing."
+  },
+  {
+    "id": 75,
+    "category": "Scheduling & Service Area",
+    "question": "Where are you located?",
+    "answer": "251 Hatfield Rd in Niles Charter, MI. We serve Niles and the South Bend area."
+  },
+  {
+    "id": 76,
+    "category": "Scheduling & Service Area",
+    "question": "How soon can you start?",
+    "answer": "Depends on our current schedule — call or text 269-409-1239 for the earliest opening."
+  },
+  {
+    "id": 77,
+    "category": "Scheduling & Service Area",
+    "question": "Are you open Saturdays?",
+    "answer": "Yep — Saturdays 9am–3:30pm, and we can schedule installs then too."
+  },
+  {
+    "id": 78,
+    "category": "Scheduling & Service Area",
+    "question": "Do you come to my area?",
+    "answer": "We're based in Niles and cover Niles plus the South Bend area. Not sure? Just ask."
+  },
+  {
+    "id": 79,
+    "category": "Scheduling & Service Area",
+    "question": "How do I get started?",
+    "answer": "Call or text 269-409-1239 — tell us your rooms and what you're thinking, and we'll set up your free estimate."
+  },
+  {
+    "id": 80,
+    "category": "Scheduling & Service Area",
+    "question": "Can you work around my schedule?",
+    "answer": "We'll do our best — tell us your constraints when you book and we'll find a fit."
+  },
+  {
+    "id": 81,
+    "category": "Scheduling & Service Area",
+    "question": "Is there a best time of year to install flooring?",
+    "answer": "Any time works — but fall and winter book up fast as folks prep for the holidays. Earlier is better."
+  },
+  {
+    "id": 82,
+    "category": "Scheduling & Service Area",
+    "question": "What if I have an emergency after hours?",
+    "answer": "Call or text 269-409-1239 — if it's urgent like water damage, we'll get back to you as fast as we can."
+  },
+  {
+    "id": 83,
+    "category": "Scheduling & Service Area",
+    "question": "Is it better to call or text?",
+    "answer": "Either — texting photos of your space actually helps us a lot. Use whichever's easier: 269-409-1239."
+  },
+  {
+    "id": 84,
+    "category": "Scheduling & Service Area",
+    "question": "My HOA has flooring rules — can you work with that?",
+    "answer": "Yep — send us the requirements and we'll make sure your flooring and install check every box."
+  },
+  {
+    "id": 85,
+    "category": "Scheduling & Service Area",
+    "question": "Do I need a permit for new flooring?",
+    "answer": "Usually not for flooring alone — but if your project touches structural or electrical, we'll flag it."
+  },
+  {
+    "id": 86,
+    "category": "Scheduling & Service Area",
+    "question": "How long does a whole-house job take?",
+    "answer": "Most whole-house installs run several days to a couple of weeks depending on size and materials. You'll get a firm schedule before we start."
+  },
+  {
+    "id": 87,
+    "category": "Scheduling & Service Area",
+    "question": "Does weather delay installation?",
+    "answer": "Rarely — we're indoors, after all. Extreme weather can slow material deliveries, and we'll keep you posted if so."
+  },
+  {
+    "id": 88,
+    "category": "Scheduling & Service Area",
+    "question": "Do you do evening appointments for estimates?",
+    "answer": "We do our best to work around your schedule — call or text 269-409-1239 and we'll find a time."
+  },
+  {
+    "id": 89,
+    "category": "Care, Maintenance & After Install",
+    "question": "Do you do repairs, or only full installs?",
+    "answer": "Both — repairs, single-room jobs, and full-home installs."
+  },
+  {
+    "id": 90,
+    "category": "Care, Maintenance & After Install",
+    "question": "Will new floors raise my home's value?",
+    "answer": "Good floors are one of the best ROI updates you can make — hardwood and LVP especially. Buyers notice floors first."
+  },
+  {
+    "id": 91,
+    "category": "Care, Maintenance & After Install",
+    "question": "What if something goes wrong after the install?",
+    "answer": "Call us at 269-409-1239 — we stand behind our work and we'll make it right."
+  },
+  {
+    "id": 92,
+    "category": "Care, Maintenance & After Install",
+    "question": "Why choose Pharaoh's over a big box store?",
+    "answer": "You get a local Niles crew that actually answers the phone, free estimates, and one team on your job from start to finish."
+  },
+  {
+    "id": 93,
+    "category": "Care, Maintenance & After Install",
+    "question": "Can I put area rugs on my new floors?",
+    "answer": "Absolutely — just use a rug pad underneath, and wait until any finish is fully cured. We'll tell you the timing."
+  },
+  {
+    "id": 94,
+    "category": "Care, Maintenance & After Install",
+    "question": "What cleaning products should I avoid?",
+    "answer": "Skip abrasive scrubbers and harsh chemicals — and never soak wood floors with water. When in doubt, ask us."
+  },
+  {
+    "id": 95,
+    "category": "Care, Maintenance & After Install",
+    "question": "How do I maintain my floors long-term?",
+    "answer": "Sweep or vacuum regularly, clean spills fast, and use the right cleaner for your flooring type — we'll send you home with the basics."
+  },
+  {
+    "id": 96,
+    "category": "Care, Maintenance & After Install",
+    "question": "How do I prevent furniture dents?",
+    "answer": "Felt pads under everything — they're cheap and they work. Ask us and we'll point you to the right kind."
+  },
+  {
+    "id": 97,
+    "category": "Care, Maintenance & After Install",
+    "question": "Will my floors look different in my lighting?",
+    "answer": "Yes — lighting changes everything. That's why we bring samples to your home instead of picking from a showroom swatch."
+  },
+  {
+    "id": 98,
+    "category": "Care, Maintenance & After Install",
+    "question": "What's the best way to clean my new floors?",
+    "answer": "Depends on the flooring — we'll give you simple care instructions for your specific floors before we leave."
+  },
+  {
+    "id": 99,
+    "category": "Care, Maintenance & After Install",
+    "question": "Can I use a steam mop?",
+    "answer": "Not on hardwood or laminate — steam can wreck them. It's fine on tile. When in doubt, ask before you steam."
+  },
+  {
+    "id": 100,
+    "category": "Care, Maintenance & After Install",
+    "question": "My grout looks dirty — what do I do?",
+    "answer": "A grout-safe cleaner and a stiff brush handle most of it. If it's beyond cleaning, call us — we can talk about a refresh."
+  },
+  {
+    "id": 101,
+    "category": "Financing (Acorn)",
+    "question": "Do you offer financing?",
+    "answer": "Yes — we offer financing through Acorn Finance. Quick application, real offers in about a minute, and we'll walk you through it."
+  },
+  {
+    "id": 102,
+    "category": "Financing (Acorn)",
+    "question": "What is Acorn Finance?",
+    "answer": "It's a financing platform that connects you with 30+ lenders. You fill out one short form and compare real loan offers side by side."
+  },
+  {
+    "id": 103,
+    "category": "Financing (Acorn)",
+    "question": "How do I apply?",
+    "answer": "We'll send you our financing link by text or email — or you can apply right at your estimate. Takes just a few minutes."
+  },
+  {
+    "id": 104,
+    "category": "Financing (Acorn)",
+    "question": "How fast will I know if I'm approved?",
+    "answer": "Prequalification takes about 60 seconds with no impact to your credit. Final approval is often same-day."
+  },
+  {
+    "id": 105,
+    "category": "Financing (Acorn)",
+    "question": "Will checking my options hurt my credit score?",
+    "answer": "No — checking rates uses a soft credit pull only. A hard pull only happens if you accept an offer and complete the full application."
+  },
+  {
+    "id": 106,
+    "category": "Financing (Acorn)",
+    "question": "What credit score do I need?",
+    "answer": "Lenders in the network work with scores from 550 up. Better credit usually means better rates."
+  },
+  {
+    "id": 107,
+    "category": "Financing (Acorn)",
+    "question": "How much can I finance?",
+    "answer": "Loans from $1,000 to $100,000, depending on your credit profile and the lender."
+  },
+  {
+    "id": 108,
+    "category": "Financing (Acorn)",
+    "question": "What are the interest rates?",
+    "answer": "Rates depend on your credit profile — with 30+ lenders competing, you compare real personalized offers and pick what fits."
+  },
+  {
+    "id": 109,
+    "category": "Financing (Acorn)",
+    "question": "Can I get $0 down?",
+    "answer": "Usually, yes — most loans cover the full project cost with nothing out of pocket."
+  },
+  {
+    "id": 110,
+    "category": "Financing (Acorn)",
+    "question": "What are the loan terms?",
+    "answer": "Terms run from 12 months up to 12 years depending on the loan amount — you pick the monthly payment that fits your budget."
+  },
+  {
+    "id": 111,
+    "category": "Financing (Acorn)",
+    "question": "Can I pay it off early?",
+    "answer": "Yes — Acorn's lending partners don't charge prepayment penalties."
+  },
+  {
+    "id": 112,
+    "category": "Financing (Acorn)",
+    "question": "When do I get the money?",
+    "answer": "Many lenders fund within 1 business day of approval; some take 2–5 days."
+  },
+  {
+    "id": 113,
+    "category": "Financing (Acorn)",
+    "question": "How do I pay you with the loan?",
+    "answer": "The loan funds go to you, and you pay us just like a cash customer."
+  },
+  {
+    "id": 114,
+    "category": "Financing (Acorn)",
+    "question": "Does the loan put a lien on my house?",
+    "answer": "No — these are unsecured personal loans, not home equity loans. Nothing tied to your house."
+  },
+  {
+    "id": 115,
+    "category": "Financing (Acorn)",
+    "question": "Can I finance just part of the job?",
+    "answer": "Sure — finance what you want and pay the rest out of pocket. Whatever works for your budget."
+  },
+  {
+    "id": 116,
+    "category": "Financing (Acorn)",
+    "question": "Can I add my spouse or partner to the application?",
+    "answer": "Yes — a co-borrower can be added right on the application."
+  },
+  {
+    "id": 117,
+    "category": "Financing (Acorn)",
+    "question": "What if I don't get approved?",
+    "answer": "You'll see offers from multiple lenders at once, so you get the full picture. And if financing doesn't work out, we can phase the project to fit your budget."
+  },
+  {
+    "id": 118,
+    "category": "Financing (Acorn)",
+    "question": "Is there a fee to apply?",
+    "answer": "No — checking your offers is 100% free, for you and for us."
+  },
+  {
+    "id": 119,
+    "category": "Financing (Acorn)",
+    "question": "Is my information safe?",
+    "answer": "Your application goes straight to Acorn and their lenders — we never see your financial details."
+  },
+  {
+    "id": 120,
+    "category": "Financing (Acorn)",
+    "question": "Can I get pre-approved before my estimate?",
+    "answer": "Absolutely — get pre-approved first and you'll walk into your estimate already knowing your budget. Just ask us for the link."
+  }
+]
