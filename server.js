@@ -19,24 +19,57 @@ const GREETING =
   "Hi! Thanks for reaching out to Pharaoh's Carpets & Floors. Ask me anything about flooring, estimates, scheduling, or financing — or call/text us at 269-409-1239.";
 
 const FALLBACK =
-  "Good question — to give you the right answer, could you share a few more details (or call/text us at 269-409-1239)?";
+  "Good question — I want to make sure you get the right answer, so I've flagged this for Jack or Josh. They'll follow up shortly, or you can reach us now at 269-409-1239.";
+
+// Deduplicate webhook redeliveries: Meta occasionally delivers the same
+// message event more than once. Track recent message ids so we only
+// answer each inbound message a single time.
+const seenMids = new Map(); // mid -> timestamp (ms)
+const DEDUP_WINDOW_MS = 10 * 60 * 1000;
+function alreadyAnswered(mid) {
+  if (!mid) return false;
+  const now = Date.now();
+  if (seenMids.has(mid)) return true;
+  seenMids.set(mid, now);
+  if (seenMids.size > 500) {
+    for (const [k, t] of seenMids) {
+      if (now - t > DEDUP_WINDOW_MS) seenMids.delete(k);
+      if (seenMids.size <= 400) break;
+    }
+  }
+  return false;
+}
+
+function significantWords(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(" ")
+    .filter((w) => w.length > 2);
+}
 
 function findAnswer(message) {
-  const norm = message.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
-  const words = norm.split(" ").filter((w) => w.length > 2);
+  const words = significantWords(message);
+  if (!words.length) return null;
 
   let best = null;
   let bestScore = 0;
   for (const faq of faqs) {
     const q = faq.question.toLowerCase();
-    let score = 0;
-    for (const w of words) if (q.includes(w)) score++;
+    let matched = 0;
+    for (const w of words) if (q.includes(w)) matched++;
+    // Require the FAQ to cover most of the user's significant words.
+    // Near-misses fall through to the fallback instead of a wrong answer.
+    const coverage = matched / words.length;
+    const score = coverage >= 0.8 && matched >= 2 ? matched : 0;
     if (score > bestScore) {
       bestScore = score;
       best = faq;
     }
   }
-  return bestScore >= 2 ? best : null;
+  return best;
 }
 
 function pickReply(text) {
@@ -102,7 +135,12 @@ app.post("/webhook", async (req, res) => {
       for (const event of entry.messaging || []) {
         const senderId = event.sender && event.sender.id;
         const message = event.message && event.message.text;
+        const mid = event.message && event.message.mid;
         if (!senderId || !message) continue;
+        if (alreadyAnswered(mid)) {
+          console.log("Skipping duplicate delivery of", mid);
+          continue;
+        }
         const replyText = pickReply(message);
         await fetch(`https://graph.facebook.com/v21.0/me/messages?access_token=${process.env.PAGE_ACCESS_TOKEN}`, {
           method: "POST",
