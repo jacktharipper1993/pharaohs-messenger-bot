@@ -718,5 +718,16 @@
     "category": "Financing (Acorn)",
     "question": "Can I get pre-approved before my estimate?",
     "answer": "Absolutely — get pre-approved first and you'll walk into your estimate already knowing your budget. Just ask us for the link."
+  }  {
+    "id": 121,
+    "category": "Scheduling & Service Area",
+    "question": "How do I schedule an estimate?",
+    "answer": "Easy — call or text 269-409-1239 with your rooms and the flooring you're thinking about, and we'll get you scheduled. Estimates are free."
+  },
+  {
+    "id": 122,
+    "category": "Products & Materials",
+    "question": "Do you install luxury vinyl plank?",
+    "answer": "Yep — we install luxury vinyl plank. It's 100% waterproof, which is why we recommend it for kitchens, baths, and busy households. Call or text 269-409-1239 for a free estimate."
   }
 ]
