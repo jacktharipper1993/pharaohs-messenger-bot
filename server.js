@@ -183,6 +183,10 @@ function replyPayload(text) {
 
 app.get("/", (req, res) => res.send("Pharaoh's Messenger Bot is running."));
 
+// Business logo — attached to Twilio MMS appointment reminders so customers
+// can see the text is really from Pharaoh's Carpets & Floors.
+app.get("/logo.jpg", (req, res) => res.sendFile(path.join(__dirname, "logo.jpg")));
+
 // Privacy policy — required by Meta for App Review.
 const PRIVACY_HTML = `<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
