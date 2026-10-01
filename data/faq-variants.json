@@ -1,0 +1,613 @@
+{
+ "1": [
+  "Are estimates free?",
+  "Do you charge for coming out to measure?",
+  "Is the quote free or do I pay for it?"
+ ],
+ "2": [
+  "What's it cost to get new floors?",
+  "Ballpark price for new flooring?",
+  "How much am I looking at for flooring?"
+ ],
+ "3": [
+  "Will you install flooring I already bought?",
+  "I bought my own floors, can you put them in?",
+  "Do you do labor-only installs?"
+ ],
+ "4": [
+  "Can you price it out without coming over?",
+  "Do I have to have you come out for a quote?",
+  "Can I just text you measurements for a price?"
+ ],
+ "5": [
+  "What's the cheapest flooring you do?",
+  "I need the budget option, what do you suggest?",
+  "What's your lowest priced flooring?"
+ ],
+ "6": [
+  "Why does my quote include more material than my square footage?",
+  "What's the extra 10% on my estimate for?",
+  "Why am I paying for flooring I won't see?"
+ ],
+ "7": [
+  "Should I measure before you come out?",
+  "Do you measure or do I need to?",
+  "Do I need my room sizes ready?"
+ ],
+ "8": [
+  "Can you do floors for a new build?",
+  "Do you work on houses being built?",
+  "Will you install flooring in new construction?"
+ ],
+ "9": [
+  "Can you do my rental house?",
+  "Do you work on rentals?",
+  "I have a rental property, can you do the floors?"
+ ],
+ "10": [
+  "Should I shop around or just go with you?",
+  "Is it worth getting more estimates?",
+  "Do people usually compare quotes?"
+ ],
+ "11": [
+  "Can you beat a competitor's quote?",
+  "If I get a lower price elsewhere will you match it?",
+  "Do you price match?"
+ ],
+ "12": [
+  "Do I get anything for sending you customers?",
+  "Is there a discount if a friend referred me?",
+  "Do you do referral rewards?"
+ ],
+ "13": [
+  "Do you have a minimum for jobs?",
+  "Will you do a really small job?",
+  "Is there a smallest job you'll take?"
+ ],
+ "14": [
+  "Water ruined my floors, will insurance pay?",
+  "Does homeowners insurance cover water damaged floors?",
+  "My floor flooded, can insurance cover replacement?"
+ ],
+ "15": [
+  "Will the price change after I sign?",
+  "Is the quote locked in?",
+  "Can the estimate price go up later?"
+ ],
+ "16": [
+  "Do I need to put money down?",
+  "Is a deposit needed to book?",
+  "Do you need a deposit upfront?"
+ ],
+ "17": [
+  "When does my quote expire?",
+  "How long is the estimate valid?",
+  "Does my estimate have an expiration date?"
+ ],
+ "18": [
+  "What types of floors do you do?",
+  "What flooring options do you offer?",
+  "Which floors can you install?"
+ ],
+ "19": [
+  "I have kids and dogs, what floor holds up?",
+  "What's toughest with pets and children?",
+  "Best floors for a house full of pets?"
+ ],
+ "20": [
+  "Can you find flooring to match what I have?",
+  "I need to match my current floors, can you?",
+  "Can you match the flooring in the rest of my house?"
+ ],
+ "21": [
+  "Can you do basement floors?",
+  "Do you install flooring downstairs in basements?",
+  "Is my basement okay for new flooring?"
+ ],
+ "22": [
+  "Can you do my staircase?",
+  "Do you install flooring on steps?",
+  "Will you do the stairs too?"
+ ],
+ "23": [
+  "LVP vs laminate, what's different?",
+  "How is luxury vinyl different from laminate?",
+  "Which is better, LVP or laminate?"
+ ],
+ "24": [
+  "What flooring lasts the longest?",
+  "What's the toughest floor you install?",
+  "Which flooring holds up best over time?"
+ ],
+ "25": [
+  "Can LVP actually get wet?",
+  "Is luxury vinyl truly waterproof?",
+  "Will water hurt LVP?"
+ ],
+ "26": [
+  "Do you have to tear out my old floors first?",
+  "Can new flooring go right over the old?",
+  "Is it okay to install on top of existing flooring?"
+ ],
+ "27": [
+  "Can you help me pick colors?",
+  "Will you help me choose a style?",
+  "Do you help with design choices?"
+ ],
+ "28": [
+  "What's the difference between solid and engineered wood?",
+  "Should I get solid or engineered hardwood?",
+  "Engineered vs solid hardwood, which is better?"
+ ],
+ "29": [
+  "Is carpet out of style now?",
+  "Do people still get carpet?",
+  "Is carpet still popular?"
+ ],
+ "30": [
+  "What floors are best for allergies?",
+  "I have bad allergies, what should I get?",
+  "Which flooring is best if I'm allergic to dust?"
+ ],
+ "31": [
+  "What are most people getting these days?",
+  "What's selling the most right now?",
+  "What's the trending flooring choice?"
+ ],
+ "32": [
+  "What should I put in my kitchen?",
+  "Best kitchen flooring?",
+  "What floor works best in a kitchen?"
+ ],
+ "33": [
+  "What flooring is best for a bathroom?",
+  "What should I use in my bathroom?",
+  "Best option for bathroom floors?"
+ ],
+ "34": [
+  "What flooring for a laundry room?",
+  "What works in laundry rooms?",
+  "Best floor for the laundry room?"
+ ],
+ "35": [
+  "What should I put in my mudroom?",
+  "Best mudroom flooring?",
+  "What holds up in a mudroom?"
+ ],
+ "36": [
+  "Can you do my garage floor?",
+  "Do you coat garage floors?",
+  "Will you do flooring in a garage?"
+ ],
+ "37": [
+  "Do you do shower tile?",
+  "Can you retile my shower?",
+  "Will you tile a shower for me?"
+ ],
+ "38": [
+  "Is it okay to install over heated floors?",
+  "Can I put flooring over radiant heating?",
+  "Does radiant heat work under new flooring?"
+ ],
+ "39": [
+  "Do you install floor heating?",
+  "Can you put in heated flooring?",
+  "Do you do radiant heat installs?"
+ ],
+ "40": [
+  "Any environmentally friendly flooring?",
+  "Do you carry green flooring options?",
+  "What's your most eco-friendly floor?"
+ ],
+ "41": [
+  "Which way should my planks go?",
+  "What direction do you lay the planks?",
+  "How do I decide plank direction?"
+ ],
+ "42": [
+  "What kind of pad goes under the carpet?",
+  "What carpet cushion do you install?",
+  "Do you include good padding with carpet?"
+ ],
+ "43": [
+  "Will you seal my grout?",
+  "Is grout sealing included?",
+  "Can you seal the grout lines?"
+ ],
+ "44": [
+  "Does wood flooring need to sit before installing?",
+  "How long does hardwood need to acclimate?",
+  "Do you let the wood adjust to my house first?"
+ ],
+ "45": [
+  "Are wide planks in style?",
+  "Wide or narrow planks, what's popular?",
+  "What plank width is trending?"
+ ],
+ "46": [
+  "What's the difference between carpet fibers?",
+  "Nylon vs polyester carpet, which is better?",
+  "Which carpet fiber should I pick?"
+ ],
+ "47": [
+  "What size tile is in style?",
+  "What's the popular tile size right now?",
+  "Big or small tile, what's trending?"
+ ],
+ "48": [
+  "What's toughest for an entryway?",
+  "Best flooring for a front entry?",
+  "What should I put in my entryway?"
+ ],
+ "49": [
+  "Can you repair scratches from my dog?",
+  "My dog scratched up the floors, can you fix them?",
+  "Do you fix pet scratches on floors?"
+ ],
+ "50": [
+  "Can you sand and refinish my wood floors?",
+  "Do you refinish hardwood?",
+  "Instead of new floors, can you refinish mine?"
+ ],
+ "51": [
+  "How long will the install take?",
+  "How many days for installation?",
+  "What's the timeline for install day?"
+ ],
+ "52": [
+  "Will you move my furniture?",
+  "Do I need to move furniture myself?",
+  "Is furniture moving included?"
+ ],
+ "53": [
+  "Will you tear out my old floors?",
+  "Is removal of old flooring included?",
+  "Do you haul away the old floor?"
+ ],
+ "54": [
+  "How do I prep for install day?",
+  "What should I do before you come?",
+  "Anything I need to do before installation?"
+ ],
+ "55": [
+  "Should I stay home while you work?",
+  "Do I have to be there during the install?",
+  "Can you work while I'm at work?"
+ ],
+ "56": [
+  "Will you clean up when you're done?",
+  "Is cleanup included?",
+  "Do you leave the place clean?"
+ ],
+ "57": [
+  "Will you do a single room?",
+  "Do you take one-room jobs?",
+  "Can I just get one room done?"
+ ],
+ "58": [
+  "Can you fix my squeaky floors?",
+  "My floor feels uneven, can you level it?",
+  "Do you fix squeaks and dips?"
+ ],
+ "59": [
+  "When can I walk on it after install?",
+  "How long before I can use the new floor?",
+  "Do I need to stay off the floors after?"
+ ],
+ "60": [
+  "Do you do the trim and transitions?",
+  "Will you install baseboards and thresholds?",
+  "Is trim work included?"
+ ],
+ "61": [
+  "Will there be dust everywhere during tear-out?",
+  "How do you keep dust down?",
+  "Do you control dust when removing old floors?"
+ ],
+ "62": [
+  "Will you move my fridge and stove?",
+  "Do you handle big appliances?",
+  "Can you move the refrigerator for the install?"
+ ],
+ "63": [
+  "Do you prep the subfloor?",
+  "Is subfloor work part of the job?",
+  "What do you do to the subfloor before installing?"
+ ],
+ "64": [
+  "Will you check for moisture first?",
+  "Do you do moisture testing?",
+  "Is a moisture test part of the install?"
+ ],
+ "65": [
+  "Can we live here while you work?",
+  "Do we need to move out during installation?",
+  "Is it okay to stay home for a multi-day job?"
+ ],
+ "66": [
+  "Is the install really loud?",
+  "How much noise should I expect?",
+  "Will installation be disruptive noise-wise?"
+ ],
+ "67": [
+  "Does installation smell?",
+  "Are there fumes during install?",
+  "Should I worry about odors?"
+ ],
+ "68": [
+  "How big is your crew?",
+  "How many installers will show up?",
+  "What's your crew size?"
+ ],
+ "69": [
+  "Is there a supervisor on site?",
+  "Who oversees the install?",
+  "Will someone be in charge during the job?"
+ ],
+ "70": [
+  "Is it your own crew or subs?",
+  "Do you sub out the work?",
+  "Are your installers employees or subcontractors?"
+ ],
+ "71": [
+  "Will we walk through it when done?",
+  "Do you inspect the job with me after?",
+  "Is there a final inspection together?"
+ ],
+ "72": [
+  "How soon can furniture go back?",
+  "When is it safe to move furniture back?",
+  "How long before I can put furniture back?"
+ ],
+ "73": [
+  "Where should my pets go during install?",
+  "What about my animals on install day?",
+  "Do my pets need to leave during installation?"
+ ],
+ "74": [
+  "When are you open?",
+  "What are your business hours?",
+  "What time do you open and close?"
+ ],
+ "75": [
+  "Where's your shop?",
+  "What's your address?",
+  "Where are you guys based?"
+ ],
+ "76": [
+  "What's your soonest availability?",
+  "What's your lead time?",
+  "When's the earliest you can begin?"
+ ],
+ "77": [
+  "Do you work Saturdays?",
+  "Are Saturday hours a thing?",
+  "Can I come in on a Saturday?"
+ ],
+ "78": [
+  "What areas do you serve?",
+  "Do you service my town?",
+  "How far out do you travel?"
+ ],
+ "79": [
+  "What's the first step?",
+  "How do we begin?",
+  "Where do I start?"
+ ],
+ "80": [
+  "Can you fit my schedule?",
+  "Are you flexible with timing?",
+  "Can we schedule around my work hours?"
+ ],
+ "81": [
+  "Does season matter for install?",
+  "When's the best season for new floors?",
+  "Is winter okay for flooring install?"
+ ],
+ "82": [
+  "Who do I call after hours?",
+  "Do you handle emergencies at night?",
+  "What if something urgent happens after close?"
+ ],
+ "83": [
+  "Should I call or text you?",
+  "Do you prefer calls or texts?",
+  "What's the best way to reach you?"
+ ],
+ "84": [
+  "Can you meet HOA requirements?",
+  "My HOA is picky about flooring, can you handle it?",
+  "Do you work with HOA rules?"
+ ],
+ "85": [
+  "Are permits required for flooring?",
+  "Do I need to pull a permit?",
+  "Is a permit needed for this job?"
+ ],
+ "86": [
+  "What's the timeline for a whole house?",
+  "How many days for the entire house?",
+  "How long for full-house flooring?"
+ ],
+ "87": [
+  "Can bad weather push back my install?",
+  "Will rain or snow delay the job?",
+  "Does weather affect scheduling?"
+ ],
+ "88": [
+  "Can you come give an estimate in the evening?",
+  "Are after-work estimate appointments available?",
+  "Do you do estimates after 5pm?"
+ ],
+ "89": [
+  "Can you just repair my floor?",
+  "Do you do small repairs?",
+  "Will you fix a section instead of replacing everything?"
+ ],
+ "90": [
+  "Do new floors add value to my home?",
+  "Will flooring increase my resale value?",
+  "Is new flooring a good investment for home value?"
+ ],
+ "91": [
+  "What happens if there's a problem later?",
+  "Do you come back if something's wrong?",
+  "What if I notice an issue after you're done?"
+ ],
+ "92": [
+  "Why should I pick you over Home Depot?",
+  "What makes you better than the big stores?",
+  "Why not just go to a big box store?"
+ ],
+ "93": [
+  "Are rugs okay on new flooring?",
+  "Can I use area rugs?",
+  "Will rugs damage my new floors?"
+ ],
+ "94": [
+  "What cleaners shouldn't I use?",
+  "Are there products that'll ruin my floors?",
+  "What should I not clean my floors with?"
+ ],
+ "95": [
+  "How do I take care of my floors?",
+  "What's the long-term maintenance?",
+  "How do I keep my floors looking good?"
+ ],
+ "96": [
+  "How do I stop furniture from denting the floor?",
+  "What prevents dents from heavy furniture?",
+  "Will my couch dent the floors?"
+ ],
+ "97": [
+  "Will the color look different at home?",
+  "Does lighting change how floors look?",
+  "Will it look the same in my house lighting?"
+ ],
+ "98": [
+  "How should I clean my new flooring?",
+  "What's the right way to mop new floors?",
+  "How do I clean them properly?"
+ ],
+ "99": [
+  "Is a steam mop okay?",
+  "Will steam mopping damage my floors?",
+  "Are steam mops safe on new flooring?"
+ ],
+ "100": [
+  "How do I clean dirty grout?",
+  "My grout is stained, what helps?",
+  "What's the best way to clean grout?"
+ ],
+ "101": [
+  "Do you guys offer financing at all?",
+  "Can I finance my floors through you?",
+  "Do you have payment plans?",
+  "Can I pay over time?"
+ ],
+ "102": [
+  "What's Acorn Finance?",
+  "Who is Acorn Finance?",
+  "Tell me about Acorn Finance."
+ ],
+ "103": [
+  "How do I apply for financing?",
+  "Where do I fill out the application?",
+  "How do I get started with the financing application?"
+ ],
+ "104": [
+  "How long does approval take?",
+  "When will I hear back on approval?",
+  "Is approval instant?"
+ ],
+ "105": [
+  "Does checking affect my credit?",
+  "Will this hurt my credit score?",
+  "Is it a hard pull on my credit?"
+ ],
+ "106": [
+  "What's the minimum credit score?",
+  "How good does my credit need to be?",
+  "Do I need good credit?"
+ ],
+ "107": [
+  "What's the max I can borrow?",
+  "How much financing can I get?",
+  "Is there a limit on the loan amount?"
+ ],
+ "108": [
+  "What's the APR?",
+  "How much interest will I pay?",
+  "What rate can I expect?"
+ ],
+ "109": [
+  "Is zero down an option?",
+  "Do I need a down payment?",
+  "Can I finance with nothing down?"
+ ],
+ "110": [
+  "How long are the loan terms?",
+  "What repayment periods are available?",
+  "How many months can I spread payments over?"
+ ],
+ "111": [
+  "Is there a prepayment penalty?",
+  "Can I pay the loan off ahead of schedule?",
+  "Any penalty for early payoff?"
+ ],
+ "112": [
+  "How fast do I receive the funds?",
+  "When is the money available?",
+  "How long until the loan funds?"
+ ],
+ "113": [
+  "How does the loan money get to you?",
+  "Do I pay you or does the lender?",
+  "How do you get paid from my financing?"
+ ],
+ "114": [
+  "Will there be a lien on my home?",
+  "Is my house collateral for the loan?",
+  "Does financing attach to my property?"
+ ],
+ "115": [
+  "Can I finance part and pay the rest cash?",
+  "Do I have to finance the whole job?",
+  "Can I split it between financing and cash?"
+ ],
+ "116": [
+  "Can my spouse apply with me?",
+  "Can we do a joint application?",
+  "Can my partner be on the loan too?"
+ ],
+ "117": [
+  "What happens if I'm denied?",
+  "Any options if I don't qualify?",
+  "What if my application gets rejected?"
+ ],
+ "118": [
+  "Does applying cost anything?",
+  "Is the application free?",
+  "Any fees just to apply?"
+ ],
+ "119": [
+  "Is my info secure?",
+  "How is my personal data protected?",
+  "Will my information be shared?"
+ ],
+ "120": [
+  "Can I get pre-approved first?",
+  "Should I get approved before the estimate?",
+  "Can I pre-qualify ahead of time?"
+ ],
+ "121": [
+  "How do I book an estimate?",
+  "How do I set up a free estimate?",
+  "What's the process to schedule an estimate?"
+ ],
+ "122": [
+  "Do you do LVP installs?",
+  "Can you install luxury vinyl plank flooring?",
+  "Do you work with luxury vinyl plank?"
+ ]
+}
