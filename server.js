@@ -119,7 +119,7 @@ function findAnswer(message) {
         }
       }
       // Needs at least 2 word hits and a good share of the text's signal.
-      // Rare, distinctive words ("lvp", "acorn") outvote common ones
+      // Rare, distinctive words ("lvp", "acorn") outvote common ones 
       // ("you", "can", "flooring"), so rewordings land right and
       // near-misses fall through to the fallback instead of a wrong answer.
       const coverage = total > 0 ? weight / total : 0;
@@ -133,10 +133,22 @@ function findAnswer(message) {
   return best;
 }
 
+// Words that can make up a greeting and nothing else ("hi", "hey there", "good morning").
+const GREET_WORDS = new Set(["hi", "hello", "hey", "good", "morning", "afternoon", "there", "yo"]);
+
+// Greeting only when the message is basically just a greeting.
+// "hey, can I pay over time?" has a real question in it, so it goes to the matcher.
+function isGreetingOnly(text) {
+  const words = text.toLowerCase().replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ").trim().split(" ").filter(Boolean);
+  return words.length > 0 && words.every((w) => GREET_WORDS.has(w));}
+
+}
+
+}
+
 function pickReply(text) {
-  const lower = text.toLowerCase().trim();
-  if (/\b(hi|hello|hey|good morning|good afternoon)\b/.test(lower)) return GREETING;
-  return (findAnswer(text) || {}).answer || FALLBACK;
+  if (isGreetingOnly(text)) return GREETING;
+  return (findAnswer(text) || {}).answer || FALLBACK;}
 }
 
 app.get("/", (req, res) => res.send("Pharaoh's Messenger Bot is running."));
