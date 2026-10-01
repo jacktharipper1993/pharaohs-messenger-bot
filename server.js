@@ -142,14 +142,9 @@ function isGreetingOnly(text) {
   const words = text.toLowerCase().replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ").trim().split(" ").filter(Boolean);
   return words.length > 0 && words.every((w) => GREET_WORDS.has(w));}
 
-}
-
-}
-
 function pickReply(text) {
   if (isGreetingOnly(text)) return GREETING;
   return (findAnswer(text) || {}).answer || FALLBACK;}
-}
 
 app.get("/", (req, res) => res.send("Pharaoh's Messenger Bot is running."));
 
