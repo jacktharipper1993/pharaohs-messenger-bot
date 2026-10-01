@@ -1,9 +1,15 @@
 const express = require("express");
+const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
 
 const app = express();
 app.use(express.json());
+// Twilio delivers inbound SMS as application/x-www-form-urlencoded.
+app.use(express.urlencoded({ extended: false }));
+// Render terminates TLS at its proxy; trust it so req.protocol is correct
+// (needed for Twilio signature validation).
+app.set("trust proxy", 1);
 
 // Conversational filler with no matching value. None of these appear as
 // significant words in any FAQ question or variant (verified), so dropping
@@ -251,8 +257,228 @@ app.post("/webhook", async (req, res) => {
   }
 });
 
+// SMS webhook (Twilio) — appointment/quote reminder replies.
+//
+// Twilio is configured (in the Twilio console, Messaging > the business number)
+// to POST inbound SMS here as form-encoded data: From, Body, MessageSid, ...
+// We reply with TwiML; Twilio delivers it as the SMS response.
+//
+// Flow:
+//   Y -> confirmation reply (+ calendar is tagged "Confirmed" by the sender
+//        script's reconciler, which owns all Google Calendar writes)
+//   N -> cancellation reply (+ tagged "Cancelled")
+//   R -> "a rep will reach out" reply + instant SMS to Jack with the details
+//        (+ tagged "Reschedule requested")
+//   anything else -> FAQ-bank answer, or the SMS fallback ("flagged for
+//        Jack or Josh") when nothing matches.
+//
+// Customer name/time details for replies come from the most recent reminder WE
+// sent to that number (looked up via Twilio's API and parsed from our own
+// reminder template) — no Google credentials needed on this service.
+// ---------------------------------------------------------------------------
+const SMS_FALLBACK =
+  "Good question — I've flagged this for Jack or Josh, they'll follow up shortly.";
+
+const REMINDER_MARKER = "with a reminder that you have";
+
+// Deduplicate Twilio redeliveries (it retries the webhook if we are slow).
+const seenSmsSids = new Map(); // MessageSid -> timestamp (ms)
+function smsAlreadyHandled(sid) {
+  if (!sid) return false;
+  const now = Date.now();
+  if (seenSmsSids.has(sid)) return true;
+  seenSmsSids.set(sid, now);
+  if (seenSmsSids.size > 500) {
+    for (const [k, t] of seenSmsSids) {
+      if (now - t > DEDUP_WINDOW_MS) seenSmsSids.delete(k);
+      if (seenSmsSids.size <= 400) break;
+    }
+  }
+  return false;
+}
+
+function smsIntent(text) {
+  const t = (text || "").trim().toLowerCase().replace(/[.!?\s]+$/, "");
+  if (/^(y|yes|yeah|yep|confirm|confirmed)$/.test(t)) return "confirm";
+  if (/^(n|no|nope|cancel|cancelled|canceled)$/.test(t)) return "cancel";
+  if (/^(r|reschedule)$/.test(t)) return "reschedule";
+  return null;
+}
+
+// Verify the request really came from Twilio (HMAC-SHA1 of the full URL +
+// sorted POST params, per Twilio's docs). Returns false when the auth token
+// isn't configured, so the route stays closed until credentials exist.
+function twilioSignatureValid(req) {
+  const token = process.env.TWILIO_AUTH_TOKEN;
+  if (!token) return false;
+  const signature = req.headers["x-twilio-signature"];
+  if (!signature) return false;
+  const url =
+    process.env.SMS_WEBHOOK_URL ||
+    `${req.protocol}://${req.get("host")}${req.originalUrl}`;
+  const params = req.body || {};
+  const data =
+    url + Object.keys(params).sort().map((k) => k + params[k]).join("");
+  const expected = crypto.createHmac("sha1", token).update(data, "utf8").digest("base64");
+  const a = Buffer.from(signature, "utf8");
+  const b = Buffer.from(expected, "utf8");
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
+}
+
+function twilioRestAuth() {
+  const sid = process.env.TWILIO_ACCOUNT_SID;
+  const token = process.env.TWILIO_AUTH_TOKEN;
+  if (!sid || !token) return null;
+  return { sid, auth: "Basic " + Buffer.from(`${sid}:${token}`).toString("base64") };
+}
+
+// Find the latest reminder WE sent to this number and pull the customer's
+// first name, appointment type, and time out of our own template text.
+async function lookupReminderContext(toPhone) {
+  try {
+    const creds = twilioRestAuth();
+    const from = process.env.TWILIO_PHONE_NUMBER;
+    if (!creds || !from) return null;
+    const url =
+      `https://api.twilio.com/2010-04-01/Accounts/${creds.sid}/Messages.json` +
+      `?To=${encodeURIComponent(toPhone)}&From=${encodeURIComponent(from)}&PageSize=20`;
+    const res = await fetch(url, { headers: { Authorization: creds.auth } });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const msg = (data.messages || []).find(
+      (m) => m.direction === "outbound-api" && (m.body || "").includes(REMINDER_MARKER)
+    );
+    if (!msg) return null;
+    const mt = (msg.body || "").match(
+      /Hello ([^,]+), this is Pharaoh's Carpets & Floors with a reminder that you have (a quote|an appointment|an installation) today at ([\d:]+ [AP]\.M\.)/
+    );
+    if (!mt) return null;
+    return {
+      firstName: mt[1],
+      typeNoun: mt[2].replace(/^(a|an) /, ""), // "a quote" -> "quote"
+      time: mt[3],
+    };
+  } catch (e) {
+    console.error("lookupReminderContext error:", e.message);
+    return null;
+  }
+}
+
+function smsConfirmReply(ctx) {
+  if (ctx)
+    return (
+      `Awesome, ${ctx.firstName} — you're confirmed for today at ${ctx.time}. ` +
+      `Thanks for your response 👍\n\nPharaoh's Carpets & Floors LLC`
+    );
+  return `Awesome — you're confirmed for today. Thanks for your response 👍\n\nPharaoh's Carpets & Floors LLC`;
+}
+
+function smsCancelReply(ctx) {
+  const noun = (ctx && ctx.typeNoun) || "appointment";
+  const when = ctx ? ` for today at ${ctx.time}` : "";
+  return (
+    `No problem — we've cancelled your ${noun}${when}. ` +
+    `To reschedule, just reply R or call/text us at 269-409-1239.\n\n— Pharaoh's Carpets & Floors LLC`
+  );
+}
+
+function smsRescheduleReply() {
+  return `Thanks — we've flagged this for Jack or Josh, and a rep will reach out shortly to get you rescheduled.\n\n— Pharaoh's Carpets & Floors LLC`;
+}
+
+function smsPickReply(text) {
+  const lower = (text || "").toLowerCase().trim();
+  if (/\b(hi|hello|hey|good morning|good afternoon)\b/.test(lower)) return GREETING;
+  return (findAnswer(text) || {}).answer || SMS_FALLBACK;
+}
+
+function escapeXml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function maskPhone(p) {
+  const d = String(p || "").replace(/\D/g, "");
+  return d.length > 4 ? `+${"*".repeat(d.length - 4)}${d.slice(-4)}` : "***";
+}
+
+// Instant SMS to Jack when a customer asks to reschedule.
+async function notifyJackReschedule(customerPhone, ctx) {
+  try {
+    const creds = twilioRestAuth();
+    const from = process.env.TWILIO_PHONE_NUMBER;
+    const jackMobile = process.env.JACK_MOBILE || "+12694506295";
+    if (!creds || !from) {
+      console.error("notifyJackReschedule: Twilio not configured");
+      return;
+    }
+    const who = ctx
+      ? `${ctx.firstName} ${customerPhone} today at ${ctx.time}`
+      : customerPhone;
+    const res = await fetch(
+      `https://api.twilio.com/2010-04-01/Accounts/${creds.sid}/Messages.json`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: creds.auth,
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({ To: jackMobile, From: from, Body: `Reschedule requested: ${who}` }),
+      }
+    );
+    if (!res.ok) console.error("notifyJackReschedule failed:", res.status);
+    else console.log("Notified Jack of reschedule request from", maskPhone(customerPhone));
+  } catch (e) {
+    console.error("notifyJackReschedule error:", e.message);
+  }
+}
+
+app.post("/sms-webhook", async (req, res) => {
+  const twiml = (text) =>
+    `<?xml version="1.0" encoding="UTF-8"?><Response><Message>${escapeXml(text)}</Message></Response>`;
+  const sendTwiml = (text) => res.type("text/xml").send(twiml(text));
+
+  if (!twilioSignatureValid(req)) {
+    console.error("SMS webhook: invalid or missing Twilio signature");
+    return res.status(403).send("forbidden");
+  }
+  const from = req.body.From || "";
+  const bodyText = req.body.Body || "";
+  const sid = req.body.MessageSid || "";
+  if (sid && smsAlreadyHandled(sid)) {
+    console.log("SMS webhook: skipping duplicate delivery", sid);
+    return sendTwiml("");
+  }
+  console.log("SMS inbound", JSON.stringify({ from: maskPhone(from), body: bodyText.slice(0, 160) }));
+
+  try {
+    const intent = smsIntent(bodyText);
+    let reply;
+    if (intent === "confirm" || intent === "cancel" || intent === "reschedule") {
+      const ctx = await lookupReminderContext(from);
+      if (intent === "confirm") reply = smsConfirmReply(ctx);
+      else if (intent === "cancel") reply = smsCancelReply(ctx);
+      else {
+        reply = smsRescheduleReply();
+        await notifyJackReschedule(from, ctx);
+      }
+    } else {
+      reply = smsPickReply(bodyText);
+    }
+    return sendTwiml(reply);
+  } catch (err) {
+    console.error("SMS webhook error:", err.message);
+    return sendTwiml(SMS_FALLBACK);
+  }
+});
+
 const PORT = process.env.PORT || 3000;
 if (require.main === module) {
   app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 }
-module.exports = { significantWords, findAnswer, pickReply, replyPayload, faqs, GREETING, FALLBACK };
+module.exports = { significantWords, findAnswer, pickReply, replyPayload, faqs, GREETING, FALLBACK,
+  app, smsIntent, smsConfirmReply, smsCancelReply, smsRescheduleReply, smsPickReply,
+  twilioSignatureValid, smsAlreadyHandled, escapeXml, maskPhone, SMS_FALLBACK,
+  _setFaqs: (list) => { faqs = list; } };
