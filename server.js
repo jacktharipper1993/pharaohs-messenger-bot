@@ -208,6 +208,8 @@ const PRIVACY_HTML = `<!DOCTYPE html>
 <li>We do not use your messages for advertising.</li>
 <li>We do not keep conversations longer than needed to run the bot; server logs rotate automatically.</li>
 </ul>
+<h2>Data deletion</h2>
+<p>Want your conversation data deleted? Email us at Jtfarrow@pharaohscarpetsfloors.com or call/text <a href="tel:+12694091239">269-409-1239</a> and ask us to delete it, and we will remove your messages from our systems. Please note that Meta retains Messenger conversation records according to its own policies.</p>
 <h2>Your choices</h2>
 <p>Prefer not to use automated replies? Call or text us directly at <a href="tel:+12694091239">269-409-1239</a> instead.</p>
 <h2>Contact</h2>
